@@ -6,6 +6,7 @@ let footer = document.querySelector('footer');
 
 let copyright = document.createElement('p');
 copyright.innerHTML = `Abigail Ibarra ${thisYear}`;
+copyright.id = "footer";
 
 footer.appendChild(copyright);
 
@@ -20,7 +21,7 @@ for (let i=0; i < skills.length; i++) {
     skillsList.appendChild(skill);
 }
 
-//handle mesage form submit + disply messages in list
+//handle message form submit + disply messages in list
 let messageForm = document.getElementsByName('leave_message');
 messageForm[0].addEventListener('submit', (e) => {
     e.preventDefault();
@@ -36,6 +37,7 @@ messageForm[0].addEventListener('submit', (e) => {
     let messageList = messageSection.querySelector('ul');
     let newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href = "mailto: ${email}">${name}</a><span> wrote: ${message} </span>`;
+    newMessage.id = "message";
 
     //remove button
     let removeButton = document.createElement('button');
@@ -45,6 +47,7 @@ messageForm[0].addEventListener('submit', (e) => {
         let entry = removeButton.parentNode;
         entry.remove();
     });
+    removeButton.id = "remove";
 
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);

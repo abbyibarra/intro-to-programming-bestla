@@ -1,0 +1,84 @@
+body {
+    background-color: white;
+    color: #c9473e;
+    font-family: 'Yeseva One', cursive;
+}
+
+p, ul {
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+h1, h2 {
+    font-size: 30px;
+    color: #c9473e;
+}
+
+#name {
+    font-size: 55px;
+    margin-bottom: 70px;
+}
+
+li {
+    display: inline-block;
+    color: #748e58;
+    border: solid #748e58;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+label {
+    color: #7c9ea2;
+    font-size: 15px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+input, textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #7c9ea2;
+}
+
+#submit {
+    color: white;
+    background-color: #7c9ea2;
+    border-color: #7c9ea2;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#message {
+    color: black;
+    border: none;
+}
+
+#remove {
+    color: white;
+    background-color: black;
+    border-color: black;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+footer, #footer {
+    padding: 25px;
+    background-color: #c9473e;
+    color: white;
+}
+
+/* media queries */
+    /* tablets + desktop */
+    @media only screen and (min-width: 768px) {
+    } 
+    /* phones */
+    @media only screen and (max-width: 767px) {
+    }
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
+    }
