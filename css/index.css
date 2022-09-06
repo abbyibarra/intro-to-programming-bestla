@@ -2,6 +2,8 @@ body {
     background-color: white;
     color: #c9473e;
     font-family: 'Yeseva One', cursive;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 p, ul {
@@ -29,6 +31,8 @@ li {
     border: solid #748e58;
     border-radius: 15px;
     padding: 10px;
+    margin-left: -40px;
+    margin-right: 100px;
 }
 
 label {
@@ -68,9 +72,38 @@ input, textarea {
 }
 
 footer, #footer {
-    padding: 25px;
+    padding: 10px;
     background-color: #c9473e;
     color: white;
+}
+
+.nav a {
+    font-family: 'Work Sans', sans-serif;
+    color: #c9473e;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.jobs li {
+    margin-bottom: 10px;
+}
+
+.messageForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* media queries */
