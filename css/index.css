@@ -77,11 +77,20 @@ footer, #footer {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: #748e58;
+}
+
 .nav a {
     font-family: 'Work Sans', sans-serif;
     color: #c9473e;
     text-decoration: none;
     padding: 10px;
+}
+
+.nav a:hover {
+    color: #748e58;
 }
 
 .nav {
@@ -104,6 +113,11 @@ footer, #footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c9473e;
 }
 
 /* media queries */
