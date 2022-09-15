@@ -54,26 +54,44 @@ messageForm[0].addEventListener('submit', (e) => {
     messageForm[0].reset();
 });
 
-//fetch GitHub repositories
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/abbyibarra/repos");
-githubRequest.send();
+// //fetch GitHub repositories
+// let githubRequest = new XMLHttpRequest();
+// githubRequest.open("GET", "https://api.github.com/users/abbyibarra/repos");
+// githubRequest.send();
 
-//handle response from server
-githubRequest.addEventListener('load', (e) => {
-    let repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
+// //handle response from server
+// githubRequest.addEventListener('load', (e) => {
+//     let repositories = JSON.parse(githubRequest.response);
+//     console.log(repositories);
 
-    //display repositories in list
-    let projectSection = document.getElementById('projects');
-    let projectList = projectSection.querySelector('ul');
+//     //display repositories in list
+//     let projectSection = document.getElementById('projects');
+//     let projectList = projectSection.querySelector('ul');
 
-    for (let i = 0; i < repositories.length; i++) {
-     let project = document.createElement('li');
+//     for (let i = 0; i < repositories.length; i++) {
+//      let project = document.createElement('li');
+//         let link = document.createElement('a');
+//         link.href = repositories[i].html_url;
+//         link.innerHTML = repositories[i].name;
+//         project.appendChild(link);
+//         projectList.appendChild(project);
+//     }
+// });
+
+//working with fetch api
+fetch('https://api.github.com/users/abbyibarra/repos')
+    .then(response => response.json())
+    .then(repositories => {
+        let projectSection = document.getElementById('projects');
+        let projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < repositories.length; i++) {
+        let project = document.createElement('li');
         let link = document.createElement('a');
         link.href = repositories[i].html_url;
         link.innerHTML = repositories[i].name;
         project.appendChild(link);
         projectList.appendChild(project);
     }
-});
+    })
+    .catch(error => alert("Oops, it's not working", error))
