@@ -11,7 +11,7 @@ copyright.id = "footer";
 footer.appendChild(copyright);
 
 //create list of skills
-let skills = ["Google Suite", "Microsoft Office", "JavaScript"];
+let skills = ["Google Suite", "Microsoft Office", "JavaScript", "HTML", "CSS"];
 let skillsSection = document.getElementById('skills');
 let skillsList = skillsSection.querySelector('ul');
 
